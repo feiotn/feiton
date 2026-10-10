@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Маникюр и наращивание ресниц | Могойтуй</title>
+  <style>
+    :root {
+      --primary: #d4a373;       /* нежный «нюд» */
+      --dark: #2c2c2c;
+      --light: #f9f9f9;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, Helvetica, sans-serif; color: var(--dark); background: var(--light); line-height: 1.6; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+    header { background: #fff; padding: 15px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+    nav ul { display: flex; justify-content: space-between; align-items: center; list-style: none; }
+    nav a { text-decoration: none; color: var(--dark); font-weight: 600; }
+    nav a:hover { color: var(--primary); }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://via.placeholder.com/1600x900?text=Салон+маникюра') no-repeat center/cover;
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    .hero p { font-size: 1.2rem; margin-bottom: 25px; }
+    .btn {
+      display: inline-block;
+      padding: 14px 30px;
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .btn:hover { background: #b88b5e; }
+
+    section { padding: 60px 0; }
+    h2 { text-align: center; font-size: 2rem; margin-bottom: 40px; color: var(--dark); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .service-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .service-card h3 { margin-bottom: 10px; }
+    .price { color: var(--primary); font-weight: bold; font-size: 1.1rem; }
+
+    .contacts { background: #fff; text-align: center; }
+    .contacts p { margin: 8px 0; }
+
+    form {
+      max-width: 500px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    label { display: block; margin-top: 20px; font-weight: 500; }
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font: inherit;
+    }
+    button[type="submit"] {
+      margin-top: 25px;
+      width: 100%;
+      padding: 14px;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover { background: #b88b5e; }
+
+    footer { background: var(--dark); color: #ccc; text-align: center; padding: 20px 0; margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="#about">О салоне</a></li>
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Маникюр и наращивание ресниц</h1>
+      <p>Идеальные ногти и выразительный взгляд — доверьтесь нашим мастерам</p>
+      <a href="#booking" class="btn">Записаться на приём</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2>О нашем салоне</h2>
+      <p style="text-align:center; max-width:700px; margin:0 auto;">
+        Мы создаём безупречный маникюр и эффектное наращивание ресниц с вниманием к деталям и заботой о здоровье ваших ногтей и ресниц. Используем только проверенные материалы и соблюдаем все санитарные нормы.
+      </p>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2>Наши услуги</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Классический маникюр</h3>
+          <p>Обработка кутикулы, придание формы ногтям, покрытие лаком или гель‑лаком.</p>
+          <p class="price">от 1 500 ₽</p>
+        </div>
+        <div class="service-card">
+          <h3>Наращивание ногтей</h3>
+          <p>Акрил, гель или полигель — подберем вариант под ваши пожелания.</p>
+          <p class="price">от 2 500 ₽</p>
+        </div>
+        <div class="service-card">
+          <h3>Наращивание ресниц</h3>
+          <p>Классика, 2D, 3D, мокрый эффект — создадим ваш идеальный взгляд.</p>
+          <p class="price">от 2 000 ₽</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="booking">
+    <div class="container">
+      <h2>Записаться на приём</h2>
+      <form action="#" method="POST">
+        <label for="name">Ваше имя</label>
+        <input type="text" id="name" name="name" required placeholder="Анна" />
+
+        <label for="phone">Телефон</label>
+        <input type="tel" id="phone" name="phone" required placeholder="+7 (999) 000-00-00" />
+
+        <label for="service">Выберите услугу</label>
+        <select id="service" name="service" required>
+          <option value="" disabled selected>Выберите услугу</option>
+          <option value="manicure">Маникюр</option>
+          <option value="nail_extension">Наращивание ногтей</option>
+          <option value="lash_extension">Наращивание ресниц</option>
+          <option value="combo">Комбо (маникюр + ресницы)</option>
+        </select>
+
+        <label for="date">Желаемая дата</label>
+        <input type="date" id="date" name="date" required />
+
+        <label for="time">Желаемое время</label>
+        <input type="time" id="time" name="time" required />
+
+        <button type="submit">Отправить заявку</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="contacts" class="contacts">
+    <div class="container">
+      <h2>Контакты</h2>
+      <p>📍 п. Могойтуй, ул. 50 лет Победы, д. 15</p>
+      <p>📞 +7 (999) 123-45-67</p>
+      <p>🕒 Ежедневно с 10:00 до 16:00</p>
+      <p>✉️ salon@example.com</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Салон маникюра и ресниц. Все права защищены.</p>
+  </footer>
+</body>
+</html>
